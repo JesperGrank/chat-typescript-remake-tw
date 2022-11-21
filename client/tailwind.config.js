@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         'skyGrey': '#f4ddc272',
-        'skyOrange': 'rgb(255, 166, 0)'
+        'skyOrange': 'rgb(255, 166, 0)',
+        'skyGreen': '#1ad421'
       },
     },
   },

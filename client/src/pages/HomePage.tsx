@@ -21,12 +21,12 @@ export default function HomePage() {
 
   return (
     <div>
-
-
-      <div className="selectName">
+      {/* Fortsätt här nedan med flex för att flytta input och knapp till mitten av skärmen och liggandes under varandra */}
+      {/* <div className='flex justify-center items-center border border-black w-1/2 m-auto mt-'> */}
+      <div className='grid items-center justify-center m-80 text-center'>
       <label>{error ? error : "Select a username to enter chat"} </label>
-      <input className="inputSelectName" type="text" placeholder="Username" value={userName} onChange={(e) => setUserName(e.target.value)}></input>
-      <button className="btn-sub2" onClick={(e) => createUser(userName)}>Enter chat</button>
+      <input className=" focus:z-10 sm:text-sm h-10 border w-72" placeholder="Username" type="text" value={userName} onChange={(e) => setUserName(e.target.value)}></input>
+      <button className="bg-white mt-4 h-10 border hover:bg-skyGreen hover:border-black w-72" onClick={(e) => createUser(userName)}>Enter chat</button>
       </div>
         
     </div>
