@@ -47,10 +47,10 @@ export default function HomePage() {
     if (error) {
       return (<div>{error}</div>)
     } else if (messages) {
-      return (<div className="chatContainer">
+      return (<div className='grid place-items-center overflow-auto max-h-60'>
         {messages && messages.map((singleMessage, index) => {
           return (
-            <div className="chat-messages" key={index}>
+            <div className="text-center mt-2 bg-skyBrown rounded-lg" key={index}>
               {singleMessage.author}: {singleMessage.text} <br />
               {singleMessage.timeStamp.toString().split('T')[0].substring(0, 10)} - {singleMessage.timeStamp.toString().split('T')[1].substring(0, 5)}
             </div>
@@ -65,9 +65,9 @@ export default function HomePage() {
     <div>
 
       {output()}
-      <div className='chatSelectName'>
-      <textarea className="textarea-style" placeholder="Type a message..." value={chatMessage} onChange={(e) => setChatMessage(e.target.value)} />
-        <button className="btn-sub2" onClick={(e) => createMessage(chatMessage)}>Send message</button>
+      <div className='grid place-items-center'>
+      <textarea className="w-72 h-10" placeholder="Type a message..." value={chatMessage} onChange={(e) => setChatMessage(e.target.value)} />
+        <button className="bg-white mt-4 h-10 border hover:bg-skyGreen hover:border-black w-72" onClick={(e) => createMessage(chatMessage)}>Send message</button>
       </div>
     </div>
   )
