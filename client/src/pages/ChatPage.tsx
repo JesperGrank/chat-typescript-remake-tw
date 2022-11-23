@@ -47,7 +47,7 @@ export default function HomePage() {
     if (error) {
       return (<div>{error}</div>)
     } else if (messages) {
-      return (<div className='grid justify-center m-auto mt-10 overflow-auto max-h-60 max-w-40'>
+      return (<div className='grid justify-center m-auto mt-10 max-h-60 max-w-40 scrollbar scrollbar-thumb-skyBrown scrollbar-track-gray-300 scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg'>
         {messages && messages.map((singleMessage, index) => {
           return (
             <div className="text-center mt-2 bg-skyBrown rounded-lg" key={index}>
