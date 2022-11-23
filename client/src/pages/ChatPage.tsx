@@ -65,9 +65,9 @@ export default function HomePage() {
     <div>
 
       {output()}
-      <div className='grid place-items-center'>
-      <textarea className="w-72 h-10 resize-none" placeholder="Type a message..." value={chatMessage} onChange={(e) => setChatMessage(e.target.value)} />
-        <button className="bg-white mt-4 h-10 border hover:bg-skyGreen hover:border-black w-72" onClick={(e) => createMessage(chatMessage)}>Send message</button>
+      <div className='grid justify-items-stretch m-auto max-w-40 mt-5'>
+        <textarea className="h-16 resize-none" placeholder="Type a message..." value={chatMessage} onChange={(e) => setChatMessage(e.target.value)} />
+        <button className="bg-white mt-4 h-10 border hover:bg-skyGreen hover:border-black" onClick={(e) => createMessage(chatMessage)}>Send message</button>
       </div>
     </div>
   )
