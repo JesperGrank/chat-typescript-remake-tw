@@ -15,6 +15,9 @@ module.exports = {
       maxHeight: {
         '60': '60vh',
       },
+      maxWidth: {
+        '40': '40vw',
+      }
     },
   },
   plugins: [],
